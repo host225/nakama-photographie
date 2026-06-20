@@ -21,7 +21,7 @@ function CustomCursor() {
   const ringRef = useRef<HTMLDivElement>(null);
   const pos = useRef({ x: -100, y: -100 });
   const ring = useRef({ x: -100, y: -100 });
-  const raf = useRef<number>();
+  const raf = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     const move = (e: MouseEvent) => { pos.current = { x: e.clientX, y: e.clientY }; };
